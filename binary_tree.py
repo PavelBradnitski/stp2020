@@ -37,6 +37,6 @@ root.insert(35) #right child
 root.insert(31)
 root.insert(10)
 root.insert(19)
-
+root.insert(13)
 
 root.PrintTree()
