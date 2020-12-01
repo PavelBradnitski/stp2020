@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "D:\\anaconda\\envs\\stp2020_Bradnitski\\python.exe"
+    "python.pythonPath": "D:\\anaconda\\envs\\stp2020_Bradnitski\\python.exe",
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint-flask"
+    ]
 }
