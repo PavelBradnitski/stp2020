@@ -1,13 +1,4 @@
-2020-12-03 23:42:43,444 ERROR: Exception on /explore [GET] [in d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py:1892]
-Traceback (most recent call last):
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\sqlalchemy\engine\base.py", line 1277, in _execute_context
-    cursor, statement, parameters, context
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\sqlalchemy\engine\default.py", line 593, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.OperationalError: no such column: user.email
-
-The above exception was the direct cause of the following exception:
-
+2020-12-04 00:07:40,715 ERROR: Exception on /user/2 [GET] [in d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py:1892]
 Traceback (most recent call last):
   File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -17,62 +8,79 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\_compat.py", line 39, in reraise
     raise value
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1948, in full_dispatch_request
-    rv = self.preprocess_request()
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 2242, in preprocess_request
-    rv = func()
-  File "C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\routes.py", line 14, in before_request
-    if current_user.is_authenticated:
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\werkzeug\local.py", line 306, in _get_current_object
-    return self.__local()
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask_login\utils.py", line 26, in <lambda>
-    current_user = LocalProxy(lambda: _get_user())
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask_login\utils.py", line 346, in _get_user
-    current_app.login_manager._load_user()
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask_login\login_manager.py", line 318, in _load_user
-    user = self._user_callback(user_id)
-  File "C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\models.py", line 81, in load_user
-    return User.query.get(int(id))
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\sqlalchemy\orm\query.py", line 1018, in get
-    return self._get_impl(ident, loading.load_on_pk_identity)
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\sqlalchemy\orm\query.py", line 1135, in _get_impl
-    return db_load_fn(self, primary_key_identity)
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\sqlalchemy\orm\loading.py", line 286, in load_on_pk_identity
-    return q.one()
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\sqlalchemy\orm\query.py", line 3490, in one
-    ret = self.one_or_none()
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\sqlalchemy\orm\query.py", line 3459, in one_or_none
-    ret = list(self)
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\sqlalchemy\orm\query.py", line 3535, in __iter__
-    return self._execute_and_instances(context)
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\sqlalchemy\orm\query.py", line 3560, in _execute_and_instances
-    result = conn.execute(querycontext.statement, self._params)
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\sqlalchemy\engine\base.py", line 1011, in execute
-    return meth(self, multiparams, params)
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\sqlalchemy\engine\base.py", line 1130, in _execute_clauseelement
-    distilled_params,
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\sqlalchemy\engine\base.py", line 1317, in _execute_context
-    e, statement, parameters, cursor, context
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\sqlalchemy\engine\base.py", line 1511, in _handle_dbapi_exception
-    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
-    raise exception
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\sqlalchemy\engine\base.py", line 1277, in _execute_context
-    cursor, statement, parameters, context
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\sqlalchemy\engine\default.py", line 593, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: user.email
-[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen 
-FROM user 
-WHERE user.id = ?]
-[parameters: (2,)]
-(Background on this error at: http://sqlalche.me/e/13/e3q8)
-2020-12-03 23:54:43,988 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:47]
-2020-12-03 23:55:07,952 ERROR: Exception on /user/pavelok_2014 [GET] [in d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py:1892]
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\routes.py", line 112, in user
+    return render_template('user.html', user=user, form = form, posts=posts.items,
+NameError: name 'form' is not defined
+2020-12-04 00:07:46,471 ERROR: Exception on /user/2 [GET] [in d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\routes.py", line 112, in user
+    return render_template('user.html', user=user, form = form, posts=posts.items,
+NameError: name 'form' is not defined
+2020-12-04 00:13:16,837 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:47]
+2020-12-04 00:13:25,470 ERROR: Exception on /user/2 [GET] [in d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\routes.py", line 112, in user
+    form = EditProfileForm()
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\wtforms\form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+TypeError: __init__() missing 1 required positional argument: 'original_username'
+2020-12-04 00:13:47,291 ERROR: Exception on /user/pavelok_2014 [GET] [in d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\routes.py", line 112, in user
+    form = EditProfileForm()
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\wtforms\form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+TypeError: __init__() missing 1 required positional argument: 'original_username'
+2020-12-04 00:15:08,711 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:47]
+2020-12-04 00:15:18,665 ERROR: Exception on /user/pavelok_2014 [GET] [in d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py:1892]
 Traceback (most recent call last):
   File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -119,6 +127,4 @@ Traceback (most recent call last):
   File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\jinja2\environment.py", line 471, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'form' is undefined
-2020-12-03 23:56:05,213 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:47]
-2020-12-03 23:56:29,480 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:47]
-2020-12-03 23:57:15,919 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:47]
+2020-12-04 00:22:34,497 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:47]

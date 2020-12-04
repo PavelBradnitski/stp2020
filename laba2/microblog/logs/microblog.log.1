@@ -1,4 +1,40 @@
-2020-12-04 00:29:23,173 ERROR: Exception on /user/pavelok_2014 [GET] [in d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py:1892]
+2020-12-04 15:29:05,323 ERROR: Exception on /user/2 [GET] [in d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 2242, in preprocess_request
+    rv = func()
+  File "C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\routes.py", line 123, in before_request
+    g.locale = str(get_locale())
+NameError: name 'g' is not defined
+2020-12-04 15:29:42,301 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 15:46:46,751 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 15:48:51,223 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 15:50:17,897 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 15:51:18,915 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 15:54:36,790 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 15:54:53,360 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 16:01:06,805 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 16:17:00,779 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 16:17:50,998 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 16:20:24,347 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 16:32:51,753 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 16:33:33,613 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 16:47:52,698 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 16:48:08,346 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 16:49:03,327 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 16:52:31,282 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 16:52:55,526 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 16:53:04,082 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
+2020-12-04 16:53:11,109 ERROR: Exception on /user/2 [GET] [in d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py:1892]
 Traceback (most recent call last):
   File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,8 +50,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\routes.py", line 114, in user
-    next_url=next_url, prev_url=prev_url,form = form)
+  File "C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\routes.py", line 116, in user
+    next_url=next_url, prev_url=prev_url, form=form)
   File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\templating.py", line 140, in render_template
     ctx.app,
   File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\templating.py", line 120, in _render
@@ -40,59 +76,13 @@ Traceback (most recent call last):
     {% block content -%}
   File "C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\templates\base.html", line 48, in block "content"
     {% block app_content %}{% endblock %}
-  File "C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\templates\user.html", line 18, in block "app_content"
-    {{ form.submit(value='Follow', class_='btn btn-default') }}
-jinja2.exceptions.UndefinedError: 'app.forms.FollowForm object' has no attribute 'submit'
-2020-12-04 00:29:48,123 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:47]
-2020-12-04 00:33:28,970 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:47]
-2020-12-04 00:34:45,267 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:47]
-2020-12-04 00:42:25,265 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:47]
-2020-12-04 00:42:52,707 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:47]
-2020-12-04 00:42:59,339 ERROR: Exception on /user/pavelok_2015 [GET] [in d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py:1892]
-Traceback (most recent call last):
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\routes.py", line 113, in user
-    next_url=next_url, prev_url=prev_url)
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\templating.py", line 140, in render_template
-    ctx.app,
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\templating.py", line 120, in _render
-    rv = template.render(context)
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\jinja2\environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\jinja2\_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\templates\user.html", line 2, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\templates\base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
-    {%- block html %}
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
-    {% block body -%}
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
-    {% block content -%}
-  File "C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\templates\user.html", line 5, in block "content"
-    {% include 'flash.html' %}
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\templating.py", line 60, in get_source
-    return self._get_source_fast(environment, template)
-  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: flash.html
-2020-12-04 00:46:21,298 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:47]
+  File "C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\templates\user.html", line 13, in block "app_content"
+    <p>{{ _('%(count)d followers', count=user.followers.count()) }}, {{ _('%(count)d following', count=user.followed.count()) }}</p>
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\jinja2\ext.py", line 144, in _gettext_alias
+    return __context.call(__context.resolve("gettext"), *args, **kwargs)
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\jinja2\ext.py", line 156, in gettext
+    return rv % variables
+  File "d:\anaconda\envs\stp2020_bradnitski\lib\site-packages\markupsafe\__init__.py", line 102, in __mod__
+    return self.__class__(text_type.__mod__(self, arg))
+ValueError: unsupported format character '?' (0x43f) at index 9
+2020-12-04 16:55:10,636 INFO: Microblog startup [in C:\Users\Lenovo\Desktop\stp2020\stp2020\laba2\microblog\app\__init__.py:52]
